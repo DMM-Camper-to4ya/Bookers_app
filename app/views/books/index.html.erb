@@ -1,33 +1,62 @@
 <h2>Books</h2>
 <!--form_with部分-->
-<%= form_with model:@book,url:'/books/129477',method: :post do |f| %>
+<%= form_with model:@book,url:'/books/',method: :post do |f| %>
 
 
 <table>
 
-   <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<thead>
+<tr>
+<th>Title</th>
+<th>Body</th>
+<th colspan="3"></th>
+</tr>
+</thead>
 
-  <td><a href="/books">Show</a></td>
-        <td><a href="/books/129477">Edit</a></td>
-        <td><a data-confirm="Are you sure?" class="destroy_129488" rel="nofollow" data-method="delete" href="/books/129488">Destroy</a></td>
-      </tr>
-<td><a class="show_129488" href="/books/129488">Show</a></td>
-        <td><a class="edit_129488" href="/books/129488/edit">Edit</a></td>
-        <td><a data-confirm="Are you sure?" class="destroy_129488" rel="nofollow" data-method="delete" href="/books/129488">Destroy</a></td>
-      </tr>
+<div>
+<tr>
+<td><a href="/books">Show</a></td>
+<td><a href="/books/129477">Edit</a></td>
+<td><a data-confirm="Are you sure?" class="destroy_129488" rel="nofollow" data-method="delete" href="/books/129488">Destroy</a></td>    </tr>
 
-<td><a class="show_129488" href="/books/129488">Show</a></td>
-        <td><a class="edit_129488" href="/books/129488/edit">Edit</a></td>
-        <td><a data-confirm="Are you sure?" class="destroy_129488" rel="nofollow" data-method="delete" href="/books/129488">Destroy</a></td>
-      </tr>
+<tr>
+<td><a href="/books">Show</a></td>
+<td><a href="/books/129477">Edit</a></td>
+<td><a data-confirm="Are you sure?" class="destroy_129488" rel="nofollow" data-method="delete" href="/books/129488">Destroy</a></td>
+</tr>
 
+<tr>
+<td><a href="/books">Show</a></td>
+<td><a href="/books/129477">Edit</a></td>
+<td><a data-confirm="Are you sure?" class="destroy_129488" rel="nofollow" data-method="delete" href="/books/129488">Destroy</a></td>
+</tr>
 
+<tr>
+<td><a href="/books">Show</a></td>
+<td><a href="/books/129477">Edit</a></td>
+<td><a data-confirm="Are you sure?" class="destroy_129488" rel="nofollow" data-method="delete" href="/books/129488">Destroy</a></td>
+</tr>
+
+<tr>
+<td><a href="/books">Show</a></td>
+<td><a href="/books/129477">Edit</a></td>
+<td><a data-confirm="Are you sure?" class="destroy_129488" rel="nofollow" data-method="delete" href="/books/129488">Destroy</a></td>
+</tr>
+
+<tr>
+<td><a href="/books">Show</a></td>
+<td><a href="/books/129477">Edit</a></td>
+<td><a data-confirm="Are you sure?" class="destroy_129488" rel="nofollow" data-method="delete" href="/books/129488">Destroy</a></td>
+</tr>
+
+<tr>
+<td><a href="/books">Show</a></td>
+<td><a href="/books/129477">Edit</a></td>
+<td><a data-confirm="Are you sure?" class="destroy_129488" rel="nofollow" data-method="delete" href="/books/129488">Destroy</a></td>
+</tr>
+
+</table>
+</div>
 <h3>New book</h3>
 
 <h6>Title</h6>
@@ -37,7 +66,6 @@
 <%=f.text_area:body %>
 
 <br><%=f.submit'Create Books' %></br>
-
 
 
 <% end %>

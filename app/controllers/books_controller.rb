@@ -10,7 +10,7 @@ class BooksController < ApplicationController
   #データをデータベースに保存するためのsaveメソッド実行
   book.save
   #Top画面へリダイレクト
-  redirect_to'/books/129477'
+  redirect_to'/'
   end
 
   def index
@@ -18,6 +18,7 @@ class BooksController < ApplicationController
   end
 
   def show
+ @book = Book.find(params[:id])
   end
 
   def edit

@@ -27,3 +27,12 @@ h3{
 h6{
   margin:0 0;
 }
+
+ table{
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: grey;
+  text-align:center;
+}
