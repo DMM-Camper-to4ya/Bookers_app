@@ -2,30 +2,33 @@
 <head>
 <title>WebCampBackendNew</title>
 
-
 </head>
-body>
+
+<body>
 <h2>Books</h2>
 
 
 <table>
-
 <thead>
 <tr>
 <th>Title</th>
 <th>Body</th>
 </tr>
 </thead>
-
-
-</table>
-
-
+<tbody>
+<div class="rink">
+<tr>
 <% @books.each do |book| %>
-<%= link_to "Show", book_path(book.id) %></br>
-<%= link_to "Edit", edit_book_path(book.id.edit) %></br>
+<td><%= book.save %></td>
+<td><%= Book.new %></td>
+<td><%= link_to "Show", book_path(book.id) %></td>
+<td><%= link_to "Edit", edit_book_path(book.id) %></td>
+<td><%= link_to "Destroy", book_path(book.id) %></td>
+</tr>
 <% end %>
-
+</tbody>
+</div>
+</table>
 <h2>New Book</h2>
 <!--form_with部分-->
 <%= form_with model: Book.new do |f| %>
@@ -38,3 +41,4 @@ body>
 <%=f.submit'Create Book' %>
 <% end %>
 </div>
+</body>

@@ -1,13 +1,15 @@
-<h1>編集画面</h1>
+<div class="edit-text">Editing Book</div>
 
-<%= form_with model :@book do |f| %>
-
-<h4>Title</h4>
+<%= form_with model: Book.new do |f| %>
+<form>
+<div class="edit-text-content">Title</div>
 <%= f.text_field :title %>
 
-<h4>Body</h4>
+<div class="edit-text-content">Body</div>
 <%=f.text_area :body %>
 
-<%=f.submit'Updete" %>
-
+<div>
+<%=f.submit 'Updete Book' %>
+</div>
+</form>
 <% end %>

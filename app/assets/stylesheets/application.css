@@ -13,10 +13,15 @@
  *= require_tree .
  *= require_self
  */
-
+* {
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
 
 body{
  margin:33px 33px 33px 33px;
+ font-family:sans-serif;
 }
 
 
@@ -24,17 +29,37 @@ h2{
   margin:16.185px 0 16.185px 0;
 }
 
+h5{
+ margin-top:0;
+ padding:0;
+}
+
 h6{
   margin:0 0;
 }
 
-
- table{
-  border-collapse: separate;
-  box-sizing: border-box;
-  text-indent: initial;
-  border-spacing: 2px;
-  border-color: grey;
-  text-align:center;
+th{
+    display:table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align:center;
 }
 
+rink{
+ flex-wrap:wrap;
+}
+
+.form{
+ margin-bottom:10px;
+ padding:0;
+}
+
+.edit-text{
+ margin:17.420px 0 5px 0;
+ font-size:20px;
+ font-weight:900;
+}
+
+.edit-text-content{
+ font-size:10px;
+}
