@@ -1,6 +1,11 @@
+<!DOCTYPE html>
+<head>
+<title>WebCampBackendNew</title>
+
+
+</head>
+body>
 <h2>Books</h2>
-<!--form_with部分-->
-<%= form_with model:@book,url:'/books/',method: :post do |f| %>
 
 
 <table>
@@ -9,63 +14,27 @@
 <tr>
 <th>Title</th>
 <th>Body</th>
-<th colspan="3"></th>
 </tr>
 </thead>
 
-<div>
-<tr>
-<td><a href="/books">Show</a></td>
-<td><a href="/books/129477">Edit</a></td>
-<td><a data-confirm="Are you sure?" class="destroy_129488" rel="nofollow" data-method="delete" href="/books/129488">Destroy</a></td>    </tr>
-
-<tr>
-<td><a href="/books">Show</a></td>
-<td><a href="/books/129477">Edit</a></td>
-<td><a data-confirm="Are you sure?" class="destroy_129488" rel="nofollow" data-method="delete" href="/books/129488">Destroy</a></td>
-</tr>
-
-<tr>
-<td><a href="/books">Show</a></td>
-<td><a href="/books/129477">Edit</a></td>
-<td><a data-confirm="Are you sure?" class="destroy_129488" rel="nofollow" data-method="delete" href="/books/129488">Destroy</a></td>
-</tr>
-
-<tr>
-<td><a href="/books">Show</a></td>
-<td><a href="/books/129477">Edit</a></td>
-<td><a data-confirm="Are you sure?" class="destroy_129488" rel="nofollow" data-method="delete" href="/books/129488">Destroy</a></td>
-</tr>
-
-<tr>
-<td><a href="/books">Show</a></td>
-<td><a href="/books/129477">Edit</a></td>
-<td><a data-confirm="Are you sure?" class="destroy_129488" rel="nofollow" data-method="delete" href="/books/129488">Destroy</a></td>
-</tr>
-
-<tr>
-<td><a href="/books">Show</a></td>
-<td><a href="/books/129477">Edit</a></td>
-<td><a data-confirm="Are you sure?" class="destroy_129488" rel="nofollow" data-method="delete" href="/books/129488">Destroy</a></td>
-</tr>
-
-<tr>
-<td><a href="/books">Show</a></td>
-<td><a href="/books/129477">Edit</a></td>
-<td><a data-confirm="Are you sure?" class="destroy_129488" rel="nofollow" data-method="delete" href="/books/129488">Destroy</a></td>
-</tr>
 
 </table>
-</div>
-<h3>New book</h3>
 
+
+<% @books.each do |book| %>
+<%= link_to "Show", book_path(book.id) %></br>
+<%= link_to "Edit", edit_book_path(book.id.edit) %></br>
+<% end %>
+
+<h2>New Book</h2>
+<!--form_with部分-->
+<%= form_with model: Book.new do |f| %>
 <h6>Title</h6>
 <%=f.text_field:title %>
 
-<h6>body</h6>
+<h6>Body</h6>
 <%=f.text_area:body %>
-
-<br><%=f.submit'Create Books' %></br>
-
-
+<div class="actions">
+<%=f.submit'Create Book' %>
 <% end %>
+</div>

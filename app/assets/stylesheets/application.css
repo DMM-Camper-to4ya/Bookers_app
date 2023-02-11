@@ -20,13 +20,14 @@ body{
 }
 
 
-h3{
+h2{
   margin:16.185px 0 16.185px 0;
 }
 
 h6{
   margin:0 0;
 }
+
 
  table{
   border-collapse: separate;
@@ -36,3 +37,4 @@ h6{
   border-color: grey;
   text-align:center;
 }
+
