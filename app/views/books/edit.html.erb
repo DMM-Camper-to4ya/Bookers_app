@@ -1,9 +1,10 @@
 <div class="edit-text">Editing Book</div>
 
-<%= form_with model: Book.new do |f| %>
+<%= form_with model: @book do |f| %>
 <form>
 <div class="edit-text-content">Title</div>
-<%= f.text_field :title %>
+<%=f.text_field :title %>
+
 
 <div class="edit-text-content">Body</div>
 <%=f.text_area :body %>
@@ -13,3 +14,6 @@
 </div>
 </form>
 <% end %>
+
+<%= link_to "Show", book_path(@book.id) %> |
+<%= link_to "Back", books_path %>
