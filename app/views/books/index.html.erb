@@ -15,20 +15,27 @@
 <th>Body</th>
 </tr>
 </thead>
+
+
+
+
+
 <tbody>
-<div class="rink">
-<tr>
 <% @books.each do |book| %>
-<td><%= book.title %></td>
+<tr>
+</div><td><%= book.title %></td>
 <td><%= book.body %></td>
+<div class"a-tag">
 <td><%= link_to "Show", book_path(book.id) %></td>
 <td><%= link_to "Edit", edit_book_path(book.id) %></td>
 <td><%= link_to "Destroy", books_path(book.id), method: :delete, "data-confirm" => "Are you sure？" %></td>
+</div>
+</tr>
 <% end %>
 </tr>
 </tbody>
-</div>
 </table>
+
 <h2>New Book</h2>
 <!--form_with部分-->
 <%= form_with model: Book.new do |f| %>
