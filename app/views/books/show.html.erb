@@ -1,17 +1,29 @@
-
+  <!DOCTYPE html>
+  <html>
+  <head>
   <title>WebCampBackendNew</title>
+  </head>
 
-  <p>
+  <body>
+  <div class="text-success">
+　<%= flash[:notice] %>
+　</div>
+
+
+  <p class="text">
   <strong>Title:</strong>
   <%= @book.title %>
-  </p>
+  </div>
 
-  <p>
+  <p class="text">
   <strong>Body:</strong>
   <%= @book.body %>
-  </p>
+  </div>
 
 
+ <div>
  <%= link_to "edit", edit_book_path(@book.id) %>
  <%= link_to "back", books_path %>
-
+ </div>
+</body>
+</html>
