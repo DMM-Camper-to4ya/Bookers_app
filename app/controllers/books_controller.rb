@@ -11,7 +11,7 @@ class BooksController < ApplicationController
   #データをデータベースに保存するためのsaveメソッド実行
   if @book.save
   #Top画面へリダイレクト
-  redirect_to book_path(book.id)
+  redirect_to book_path(@book.id)
   flash[:notice] = "Book was succesfully created."
   else
   @books=Book.all
@@ -34,11 +34,15 @@ class BooksController < ApplicationController
   @book = Book.find(params[:id])
   end
 
- def update
-  book = Book.find(params[:id])
-  book.update(book_params)
-  redirect_to book_path(book.id)
- end
+  def update
+  @book = Book.find(params[:id])
+  if @book.update(book_params)
+  redirect_to book_path(@book.id)
+  else
+  @books=Book.all
+  render :edit
+  end
+  end
 
  def destroy
   book=Book.find(params[:id])
